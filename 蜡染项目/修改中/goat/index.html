@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苗族蜡染</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<style>
+@font-face {
+  font-family: 'font';
+  src: url("../font/优设标题黑_猫啃网.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+body .shell-main-footer {
+  width: 100%;
+  position: relative;
+  height: 100px;
+  transform: translateY(100px);
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+  align-items: center;
+  text-align: center;
+  font: 100 30px 'font';
+  background-color: #a1e6ff;
+}
+</style>
+<body>
+    <div class="shell">
+        <section class="shell-smokeWord">
+            <video src="./vedio/smoke.mp4" muted autoplay></video>
+            <h1>
+                <span>欢</span>
+                <span>迎</span>
+                <span>您</span>
+                <span>来</span>
+                <span>到</span>
+                <span>苗</span>
+                <span>族</span>
+                <span>蜡</span>
+                <span>染</span>
+            </h1>
+        </section>
+        <div class="shell-top">
+        </div>
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <span>苗族蜡染</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./Template.html">历史渊源</a></li>
+                    <li><a href="./make.html">工艺技艺</a></li>
+                    <li><a href="./painter.html">传承保护</a></li>
+                    <li><a href="./contact.html">联系我们</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="shell-main-lbt">
+                <ui class="images">
+                    <li class="img">
+                        <div class="shell-main-lbt-word">
+                            <h2>先染后绣</h2><br />
+                            <span>色调丰富，层次分明，既朴实也艳丽</span>
+                        </div>
+                    </li>
+                </ui>
+                <ui class="min-images">
+                    <li class="min"></li>
+                    <li class="min"></li>
+                    <li class="min"></li>
+                </ui>
+                <div class="button">
+                    <div class="button-left"></div>
+                            <div class="button-right"></div>
+                    </div>
+                </div>
+                <div class="shell-main-header">
+                    <div class="shell-main-header-left">
+                        <div class="shell-main-header-left-top">
+                            <h2>这</h2>
+                            <span>是蜡染<br />是中华民族古老的民间传统印染工艺之一</span>
+                        </div>
+                        <div class="shell-main-header-left-bottom">
+                            <span
+                                style="color: rgb(100, 100, 100);">2008年，珙县苗族蜡染被珙县人民政府公布为“珙县首批非物质文化遗产”；同年，被宜宾市人民政府公布为“宜宾市非物质文化遗产”。2009年被四川省人民政府公布为“四川省非物质文化遗产”。
+                                <br />2009年被四川省人民政府公布为“四川省非物质文化遗产”。</span><br /><br />
+                            <span style="font-family: font;">In 2008, the Miao batik of the Miao people in the county was announced as <br /> the "first batch of intangible cultural heritage of the county" 
+                                by the people's government of the county;</span>
+                        </div>
+                        <div class="shell-main-header-left-footer">
+                            <p>-------Miao batik</p>
+                        </div>
+                    </div>
+                    <div class="shell-main-header-right"></div>
+                </div>
+                <div class="shell-main-content">
+                    <div class="shell-main-content-left">
+                        <h2>国家级非物质文化遗产之一<br />中国传统蜡染技艺</h2>
+                    </div>
+                </div>
+                <div class="shell-main-image">
+                    <div class="shell-main-image-left">
+                        <h2></h2><br />
+                        <span></span>
+                    </div>
+                    <div class="shell-main-image-auto">
+                        <p></p>
+                    </div>
+                    <div class="shell-main-image-right">
+                        <h2></h2><br />
+                        <span></span>
+                    </div>
+                    <div class="shell-main-image-img">
+                        <img src="./image/素材5.jpg" alt="">
+                        <img src="./image/素材6.jpg" alt="">
+                        <img src="./image/素材7.jpg" alt="">
+                    </div>
+                </div>
+                <div class="shell-main-footer">
+                    <span>Miao batik</span>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- 引入jquery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script>
+
+//     *************************************************************************************
+//    禁止用户放缩网页
+const keyCodeMap = {
+    // 91: true, // command
+    61: true,
+    107: true, // 数字键盘 +
+    109: true, // 数字键盘 -
+    173: true, // 火狐 - 号
+    187: true, // +
+    189: true, // -
+};
+// 覆盖ctrl||command + ‘+’/‘-’
+document.onkeydown = function (event) {
+    const e = event || window.event;
+    const ctrlKey = e.ctrlKey || e.metaKey;
+    if (ctrlKey && keyCodeMap[e.keyCode]) {
+        e.preventDefault();
+    } else if (e.detail) { // Firefox
+        event.returnValue = false;
+    }
+};
+// 覆盖鼠标滑动
+document.body.addEventListener('wheel', (e) => {
+    if (e.ctrlKey) {
+        if (e.deltaY < 0) {
+            e.preventDefault();
+            return false;
+        }
+        if (e.deltaY > 0) {
+            e.preventDefault();
+            return false;
+        }
+    }
+}, { passive: false });
+
+// *********************************************************************************************
+    window.addEventListener('scroll', function () {
+        let top = window.scrollY
+        if (top != 0) {
+            $('.shell-top').css('top', '-100vh')
+            $('.shell-main').css('top', '0')
+            $('.shell-main-lbt-word').css('transform', 'translateY(0px)')
+            $('.shell-main-lbt-word').css('backdrop-filter', 'blur(5px)')
+            $('.shell-main-lbt-word h2').css('transform', 'translate(0px)')
+            $('.shell-main-lbt-word span').css('transform', 'translate(0px)')
+
+        } else {
+            $('.shell-top').css('top', '0px')
+            $('.shell-main').css('top', '100vh')
+            $('.shell-main-lbt-word').css('transform', 'translateY(400px)')
+            $('.shell-main-lbt-word').css('backdrop-filter', 'blur(0px)')
+            $('.shell-main-lbt-word h2').css('transform', 'translate(520px)')
+            $('.shell-main-lbt-word span').css('transform', 'translate(-620px)')
+        }
+        if (top > 650) {
+            $('.shell-main-header-left-top').css('opacity', '1')
+            $('.shell-main-header-left-top').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-bottom').css('opacity', '1')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-footer').css('opacity', '1')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(0px)')
+        } else {
+            $('.shell-main-header-left-top').css('opacity', '0')
+            $('.shell-main-header-left-top').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-bottom').css('opacity', '0')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-footer').css('opacity', '0')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(400px)')
+        }
+    })
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let min = document.querySelectorAll(".min")
+    let images = document.querySelector(".images")
+    let index = 0
+    let time
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    function add() {
+        if (index >= min.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    function desc() {
+        if (index < 1) {
+            index = min.length - 1
+        } else {
+            index--
+        }
+    }
+
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 34000)
+    }
+
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 右边的按钮和左边也是差不多
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+
+    for (let i = 0; i < min.length; i++) {
+        min[i].addEventListener("click", () => {
+            index = i
+            position()
+            clearInterval(time)
+            timer()
+        })
+    }
+
+    timer()
+
+</script>
+
+</html>
