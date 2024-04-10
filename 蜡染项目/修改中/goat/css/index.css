@@ -669,42 +669,90 @@ body .shell-main-image-auto {
   left: 190px;
   width: 10px;
 }
+/* ************************************************************************ */
 
-body .shell-main-image-img {
-  width: 100%;
-  height: 100%;
+body .shell-main-image-img .container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
-body .shell-main-image-img img {
-  position: absolute;
+body .shell-main-image-img .container .card {
+  max-width: calc(33.33% - 20px);
+  height: 215px;
+  background: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: .3s ease-in-out;
 }
 
-body .shell-main-image-img img:nth-child(1) {
-  float:left;
-  width: 500px;
-  height: 500px;
-  z-index: 9;
-  left: 20px;
+body .shell-main-image-img .container .card:hover {
+  height: 420px;
 }
 
-body .shell-main-image-img img:nth-child(2) {
-  float:left;
-  width: 500px;
-  height: 500px;
-  z-index: 8;
+body .shell-main-image-img .container .card .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  top: -60px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-body .shell-main-image-img img:nth-child(3) {
-  float:left;
-  width: 500px;
-  z-index: 7;
-  height: 500px;
-  right: 0;
+body .shell-main-image-img .container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
 }
+
+body .shell-main-image-img .container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+body .shell-main-image-img .container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: .3s;
+}
+
+/* 
+************************************************************************ */
+  
+/* body .shell-main-image-img.container img {  
+  float: left; 
+  width: 500px; 
+  height: 500px; 
+  margin-right: 10px; 
+  
+body .shell-main-image-img.container img:nth-child(3) {  
+  margin-right: 0;  
+}  
+  
+body .shell-main-image-img.container img:nth-child(1) {  
+  z-index: 9;   
+}  
+  
+body .shell-main-image-img.container img:nth-child(2) {  
+  z-index: 8; 
+}  
+  
+body .shell-main-image-img.container img:nth-child(3) {  
+  z-index: 7;  
+}
+} */
 
 
 
