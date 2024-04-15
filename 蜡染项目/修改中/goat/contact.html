@@ -125,23 +125,24 @@
                 .catch(error => console.error('Error:', error));  
         }  
 </script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function(){  
-  $("#submit-btn").click(function(){  
-    var name = $("#name").val();  
-    var email = $("#email").val();  
-    var object = $("#object").val();  
-    var message = $("#message").val();  
-      
-    $.post("mysql.php", {  
-      name: name,  
-      email: email,  
-      object: object,  
-      message: message,  
-    }, function(result){  
-      $("#result").html(result);  
-    });  
-  });  
-});
-  </script>
+    $(document).ready(function() {
+        $(".btn-upper.btn-yellow.btn").click(function() {
+            var name = $("input[name='name']").val();
+            var email = $("input[name='email']").val();
+            var subject = $("input[name='subject']").val();
+            var message = $("textarea[name='message']").val();
+
+            $.post("mysql.php", {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+            }, function(result) {
+                $("#result").html(result);
+            });
+        });
+    });
+</script>
 </html>
