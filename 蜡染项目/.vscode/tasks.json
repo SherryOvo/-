@@ -1,0 +1,18 @@
+{  
+    "version": "2.0.0",  
+    "tasks": [  
+        {  
+            "label": "Run PHP Script",  
+            "type": "shell",  
+            "command": "php",  
+            "args": [  
+                "${file}"  
+            ],  
+            "group": {  
+                "kind": "build",  
+                "isDefault": true  
+            },  
+            "problemMatcher": []  
+        }  
+    ]  
+}
