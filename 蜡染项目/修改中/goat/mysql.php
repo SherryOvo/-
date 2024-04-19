@@ -1,4 +1,6 @@
 <?php    
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 // 数据库连接信息    
 $servername = "e1ccb8e6340d";   
 $username = "root";    
