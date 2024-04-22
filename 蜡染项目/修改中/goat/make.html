@@ -20,6 +20,7 @@
         body .shell-main-nav {
             margin-bottom: 0;
         }
+        
         body {
           margin: 0;
           padding: 0;
@@ -39,6 +40,16 @@
           clip-path: inset(0 2px 2px 0); /* 去除 canvas 右/下 黑边 */
           background: #f5f5f7;
           border-radius: 30px;
+        }
+        
+        /* 新增：为Three.js canvas添加样式 */
+        #threejs-canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
     </style>
        
@@ -62,7 +73,60 @@
             </div>
         </div>
         
-  
+        <!-- 新增：为Three.js canvas添加容器 -->
+        <div id="threejs-canvas-container">
+            <canvas id="threejs-canvas"></canvas>
+        </div>
+        
+        <!-- 通过script标签引入Three.js库 -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.14Ⅹ/build/three.min.js"></script>
+        <script>
+            // 初始化场景、相机、渲染器
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById("threejs-canvas-container").appendChild(renderer.domElement);
+
+            // 加载蜡染纹理
+            const loader = new THREE.TextureLoader();
+            loader.load('修改中/goat/image/Stuff3.jpg', (texture) => {
+              
+              const planeGeometry = new THREE.PlaneGeometry(10, 10); // 调整尺寸以适应纹理
+              const planeMaterial = new THREE.MeshBasicMaterial({
+                map: texture,
+                side: THREE.DoubleSide, // 双面显示纹理
+              });
+              const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
+              planeMesh.rotateX(-Math.PI / 2); // 翻转平面使其与地面平行
+
+              // 将平面添加到场景中
+              scene.add(planeMesh);
+
+              // 添加光照
+              const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // 环境光
+              const pointLight = new THREE.PointLight(0xffffff, 1, 100); // 点光源
+              pointLight.position.set(0, 1, 2); // 设置点光源位置
+
+              scene.add(ambientLight, pointLight);
+
+              // 动画与渲染循环
+              function animate() {
+                requestAnimationFrame(animate);
+                planeMesh.rotation.y += 0.01; // 可选：让平面围绕Y轴缓慢旋转以增加动态感
+                renderer.render(scene, camera);
+              }
+              animate();
+            });
+
+            // 适配窗口变化
+            window.addEventListener('resize', () => {
+              camera.aspect = window.innerWidth / window.innerHeight;
+              camera.updateProjectionMatrix();
+              renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        </script>
+    </div>
 </body>
 
 </html>
