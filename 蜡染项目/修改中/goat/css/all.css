@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f7f7;
 }
 
 body .shell {
@@ -40,5 +39,5 @@ body .shell-main-footer {
   align-items: center;
   text-align: center;
   font: 100 30px 'font';
-  background-color: #a1e6ff;
+  background-color: #41555d;
 }

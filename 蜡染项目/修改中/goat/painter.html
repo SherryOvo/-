@@ -8,6 +8,7 @@
     <title>传承保护</title>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/h.css" />
     <style>
         body .shell-main-nav ul .nav-box {
             left: 360px;
@@ -19,7 +20,7 @@
         }
 
         body {
-            background-color: rgb(248, 248, 248);
+            background-color: #D1D9E0;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -44,15 +45,69 @@
                     <li><a href="./painter.html">传承保护</a></li>
                     <li><a href="./contact.html">联系我们</a></li>
                     <div class="nav-box"></div>
-                </ul>
-            </div>    
+          </ul>
         </div>
+      </div>
+      <div class="content">
+        <div class="bg scroll-animation"></div>
+        <div class="history scroll-animation"></div>
+        <div class="txt">
+          <h1 class="scroll-animation">
+            蜡染是中华民族古老的民间传统印染工艺之一，早在秦汉时代，苗族人民就已掌握了蜡染技术。珙县苗族蜡染在四川苗族蜡染中独树一帜，清光绪《珙县志》记载：罗渡苗民取蜡熔而绘于布，染后煮布洗蜡，成蜡染 裙。
+          </h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="box-1 scroll-animation">
+          <img src="./image/1/1.jpg" alt="" />
+        </div>
+        <div class="box-2 scroll-animation">
+          <img src="./image/1/2.jpg" alt="" />
+        </div>
+        <div class="box-3 scroll-animation">
+          <img src="./image/1/4.jpg" alt="" />
+        </div>
+      </div>
 
+      <!-- js部分 -->
+
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script>
+        // 图文渐显
+        ScrollReveal().reveal(".scroll-animation", {
+          distance: "50px",
+          origin: "bottom",
+          duration: 1000,
+          delay: 200,
+          opacity: 0,
+          easing: "ease-in-out",
+        });
+
+        // // 鼠标跟踪
+        // var rippleContainer = document.querySelector(".ripple-container");
+        // rippleContainer.addEventListener("mousemove", createRipple);
+
+        // function createRipple(event) {
+        //   var ripple = document.createElement("div");
+        //   ripple.classList.add("ripple");
+        //   ripple.style.left =
+        //     event.clientX -
+        //     rippleContainer.getBoundingClientRect().left -
+        //     50 +
+        //     "px";
+        //   ripple.style.top =
+        //     event.clientY -
+        //     rippleContainer.getBoundingClientRect().top -
+        //     50 +
+        //     "px";
+        //   rippleContainer.appendChild(ripple);
+        //   setTimeout(function () {
+        //     ripple.remove();
+        //   }, 1000);
+        // }
+      </script>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
-    <script>
-      
-    </script>
-</body>
-
+    <script></script>
+  </body>
 </html>

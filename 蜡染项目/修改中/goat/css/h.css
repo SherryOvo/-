@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(/蜡染项目/修改中/goat/image/1/4.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ripple-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(86, 171, 171, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+  animation: rippleEffect 1s linear;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+header nav .logo {
+  display: inline-block;
+  position: absolute;
+  z-index: 999;
+  left: 2%;
+  top: 7px;
+}
+header nav .logo a {
+  text-decoration: none;
+  color: rgb(40, 145, 144);
+  font: 500 30px "qlls";
+  transition: 0.2s;
+}
+header nav .logo a:hover {
+  cursor: pointer;
+  color: #ecc385;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+header nav .myul {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 500px;
+  height: 40px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+header nav ul li {
+  list-style: none;
+  line-height: 40px;
+}
+header nav ul li a {
+  color: #64aec2;
+  font: 400 25px "楷体";
+  font-weight: bolder;
+  text-decoration: none;
+  transition: 0.5s;
+}
+header nav ul li a:hover {
+  color: #11659a;
+  cursor: pointer;
+}
+
+header button {
+  position: absolute;
+  z-index: 999;
+  right: 5%;
+  top: 2%;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right bottom, #ffffff, #86edf5);
+  transition: 0.8s;
+  font: 400 18px "楷体";
+  border: none;
+  border-radius: 15px;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  color: #777777;
+}
+header button:active {
+  color: #2f2f2f;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+header button:hover {
+  cursor: pointer;
+}
+
+header .left,
+.right {
+  display: inline-block;
+  width: 445px;
+  height: 445px;
+  background-color: transparent;
+  transform: rotate(45deg);
+  border-radius: 20px;
+}
+header .left {
+  position: absolute;
+  top: 150px;
+  left: 15px;
+  overflow: hidden;
+}
+header .left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  display: block;
+  background: url(.蜡染项目\修改中\goat\image\1\1.jpg) no-repeat;
+  background-size: cover;
+}
+header .right {
+  position: absolute;
+  top: 150px;
+  right: 15px;
+  overflow: hidden;
+}
+header .right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  display: block;
+  background: url(.蜡染项目\修改中\goat\image\1\2.jpg) no-repeat;
+  background-size: cover;
+}
+header .middle-txt {
+  display: inline-block;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 600px;
+  text-align: center;
+}
+header .middle-txt span {
+  color: #2ba0c1;
+  font: 400 25px/2 "华文行楷";
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.content .bg {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 300px;
+  background: url(.蜡染项目\修改中\goat\image\1\4.jpg) no-repeat 0px -540px;
+  background-size: cover;
+}
+.content .history {
+  position: absolute;
+  left: 15%;
+  top: 100px;
+  width: 700px;
+  height: 500px;
+  background: url(.蜡染项目\修改中\goat\image\1\1.jpg) no-repeat;
+  background-size: cover;
+}
+.content .txt {
+  position: absolute;
+  left: 66%;
+  top: 360px;
+  width: 300px;
+  height: 300px;
+  text-indent: 2em;
+  background-color: rgba(238, 238, 238, 0.9);
+  border-radius: 10px;
+  overflow-y: auto;
+}
+.content .txt::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+.content .txt::-webkit-scrollbar-thumb {
+  background-color: #64aec2;
+  width: 4px;
+  border-radius: 5px;
+}
+
+.content .txt:hover {
+  cursor: pointer;
+}
+.content .txt h1 {
+  color: #2ba0c1;
+  font: 400 23px/1.8 "华文行楷";
+  letter-spacing: 2px;
+  text-indent: 2em;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.container .box-1 {
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+}
+.container .box-1 img {
+  width: 250px;
+  height: auto;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.container .box-1 img:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+.container .box-2 {
+  position: absolute;
+  left: 36%;
+  top: 36%;
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  overflow: hidden;
+}
+.container .box-2 img {
+  width: 250px;
+  height: auto;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.container .box-2 img:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+.container .box-3 {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 58%;
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
+  background-repeat: 10px;
+}
+.container .box-3 img {
+  width: 550px;
+  height: auto;
+  object-fit: cover;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.container .box-3 img:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+}

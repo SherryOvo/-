@@ -387,18 +387,34 @@ body .shell-main-header-left-top {
   position: relative;
   width: 85%;
   transform: translateY(400px);
+
+  /* 增加过渡时间，使其更慢 */
+  transition-duration: 1.6s;
+
+  /* 保持初始状态的不透明度为0 */
   opacity: 0;
-  transition: .8s;
+
+  /* 添加过渡属性，包括transform和opacity */
+  transition-property: transform, opacity;
+}
+
+/* 在适当的时候（例如，当元素加载或出现时）为.shell-main-header-left-top添加.visible类 */
+body .shell-main-header-left-top.visible {
+  opacity: 1;
+  transform: translateY(0); /* 可选，如果您希望元素最终回到原位 */
 }
 
 body .shell-main-header-left-top h2 {
   font-size: 100px;
   transform: translateY(-20px);
+
+  /* 让h2元素继承父元素的过渡属性 */
+  transition: inherit;
 }
 
 body .shell-main-header-left-top span {
   -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
-  -webkit-text-stroke-color: #3a5faf;
+  -webkit-text-stroke-color: #065279;
   -webkit-text-stroke-width: 1px;
   margin-left: 20px;
   font: 600 40px '';
@@ -408,7 +424,9 @@ body .shell-main-header-left-bottom {
   width: 85%;
   height: auto;
   transform: translateY(400px);
-  transition: .8s;
+  transition-duration: 1.6s;
+
+    /* 保持0.2秒的延迟不变 */
   transition-delay: .2s;
   font-size: 20px;
 }
@@ -417,6 +435,7 @@ body .shell-main-header-right {
   width: 45%;
   height: 80%;
   background-size: cover;
+  background-position: center center;
   background-image: url("../image/蜡染素材2.jpg");
   border: 5px solid #3a5faf;
 }
@@ -627,7 +646,7 @@ body .shell-main-bottom-bottom ul li span {
 body .shell-main-image {
   width: 100%;
   display: flex;
-  height: 900px;
+  height: 600px;
   margin: 10px 0;
   position: relative;
   justify-content: center;
