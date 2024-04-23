@@ -1,65 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js Model Showcase</title>
+    <title>Glowing Blue Cube</title>
     <style>
-        body {
-            margin: 0;
-            background-color: #000;
-        }
-
-        canvas {
-            display: block;
-        }
+      body { margin: 0; }
+      canvas { display: block; }
     </style>
-</head>
-<body>
-    <canvas id="threejs-canvas"></canvas>
+  </head>
+  <body>
+    <div id="container"></div>
 
-    <script type="module">
-        import * as THREE from 'https://cdn.skypack.dev/three@0.146.0';
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
-        // 初始化场景、相机和渲染器
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+    <script>
+      // 创建场景
+      const scene = new THREE.Scene();
 
-        // 创建一个立方体模型
-        const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-        const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, flatShading: true });
-        const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        scene.add(cube);
+      // 创建相机
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 5;
 
-        // 设置摄像机位置
-        camera.position.z = 5;
+      // 创建渲染器
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.getElementById('container').appendChild(renderer.domElement);
 
-        // 添加光照
-        const ambientLight = new THREE.AmbientLight(0x404040); // 软环境光
-        scene.add(ambientLight);
+      // 添加控制器
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // 主光源
-        directionalLight.position.set(1, 1, 1).normalize();
-        scene.add(directionalLight);
+      // 创建立方体
+      const geometry = new THREE.BoxGeometry(1, 1, 1);
+      const material = new THREE.MeshStandardMaterial({ color: 0x00aaff, emissive: 0x00aaff, emissiveIntensity: 1 }); // 修改 emissiveIntensity 为 1
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
 
-        // 渲染循环
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
+      // 添加光源
+      const light = new THREE.PointLight(0xffffff, 2); // 增加光源强度
+      light.position.set(2, 2, 2);
+      scene.add(light);
 
-        // 适应窗口尺寸变化
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
+      // 创建动画函数
+      function animate() {
+        requestAnimationFrame(animate);
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      }
+
+      // 启动动画
+      animate();
     </script>
-</body>
+  </body>
 </html>

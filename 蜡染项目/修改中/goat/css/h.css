@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 body {
-  background: url(/蜡染项目/修改中/goat/image/1/4.jpg) no-repeat;
+  margin: 0; /* 移除默认的浏览器边距 */
+  background: url(/修改中/goat/image/1/6.jpg) no-repeat center center fixed; /* 添加“center center”确保图片居中 */
   background-size: cover;
-  background-attachment: fixed;
+  -webkit-background-size: cover; /* 对于旧版Webkit浏览器的兼容 */
+  -moz-background-size: cover; /* 对于旧版Firefox的兼容 */
+  -o-background-size: cover; /* 对于旧版Opera的兼容 */
+  width: 100%; /* 更改width为100%，确保body元素宽度与视口宽度一致 */
+  height: 100vh; /* 添加height属性，设置为100vh（viewport height），确保body高度等于视口高度 */
+  overflow: hidden; /* 可选：隐藏超出body部分的内容，避免滚动条出现 */
 }
 
 .ripple-container {
@@ -281,7 +287,7 @@ header .middle-txt span {
   background-repeat: 10px;
 }
 .container .box-3 img {
-  width: 550px;
+  width: 350px;
   height: auto;
   object-fit: cover;
   transition: 0.5s;
@@ -289,4 +295,54 @@ header .middle-txt span {
 }
 .container .box-3 img:hover {
   transform: scale3d(1.5, 1.5, 1.5);
+}
+.bg scroll-animation {
+  width: 500px;
+  height: auto;
+}
+.big-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* border: 1px solid #ccc;
+  border-radius: 10px; */
+  overflow: hidden;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.small-box {
+  font: 400 13.5px/1.8 "华文行楷";
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  height: 281.2px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.5s ease; /* 动画和过渡效果 */
+  opacity: 0; /* 初始状态为透明 */
+  animation: fadeIn 1s ease-in-out 0.5s forwards; /* 动画效果 */
+}
+
+.small-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.small-box:hover {
+  transform: scale(1.1); /* 悬停放大 */
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
