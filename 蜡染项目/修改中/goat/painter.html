@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>传承保护</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/h.css" />
@@ -12,11 +18,6 @@
     <style>
       body .shell-main-nav ul .nav-box {
         left: 360px;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
       }
 
       body {
@@ -75,13 +76,21 @@
             </p>
           </div>
         </div>
-        <div class="bg scroll-animation"></div>
-        <div class="history scroll-animation"></div>
-        <div class="txt">
+        <div class="bg scroll-animation">
+          <div class="unique-paragraph">
+            <p>
+              蜡染是中华民族古老的民间传统印染工艺之一，早在秦汉时代，苗族人民就已掌握了蜡染技术。珙县苗族蜡染在四川苗族蜡染中独树一帜，清光绪《珙县志》记载：罗渡苗民取蜡熔而绘于布，染后煮布洗蜡，成蜡染 裙。
+            </p>
+          </div>
+        </div>
+        <!-- <div class="history scroll-animation">
+          <img src="/修改中/goat/image/1/6.jpg" alt="" />
+        </div> -->
+        <!-- <div class="txt">
           <h1 class="scroll-animation">
             蜡染是中华民族古老的民间传统印染工艺之一，早在秦汉时代，苗族人民就已掌握了蜡染技术。珙县苗族蜡染在四川苗族蜡染中独树一帜，清光绪《珙县志》记载：罗渡苗民取蜡熔而绘于布，染后煮布洗蜡，成蜡染 裙。
           </h1>
-        </div>
+        </div> -->
       </div>
       <div class="container">
         <div class="box-1 scroll-animation">
@@ -94,11 +103,36 @@
           <img src="./image/1/5.jpg" alt="" />
         </div>
       </div>
-
+      <div
+        class="hero min-h-screen"
+        style="
+          background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);
+        "
+      >
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">传承保护</h1>
+            <p class="mb-5">
+              苗族蜡染，这一古老而深邃的艺术形式，承载着苗族人民千百年来的智慧与情感，是苗族文化传承的璀璨瑰宝。蜡染以其独特的制作工艺和图案设计，诉说着苗族的历史传说、生活习俗与审美观念。在蜡染的世界里，每一笔、每一划都蕴含着深厚的文化内涵，是苗族人民对美好生活的向往与追求。
+              然而，在现代化的冲击下，苗族蜡染的传承面临着诸多挑战。为了保护和传承这一非物质文化遗产，我们需要采取更加积极的措施，让更多的人了解和认识苗族蜡染，激发年轻一代对其的兴趣与热爱。同时，我们还应深入挖掘苗族蜡染的艺术价值和文化内涵，将其与现代审美相结合，创造出更多具有时代特色的蜡染作品。
+              相信在不久的将来，苗族蜡染这一独特的艺术形式将焕发出更加绚丽的光彩，成为中华民族优秀传统文化的重要代表之一，为世界文化多样性贡献出独特的力量。
+            </p>
+            <a href="./contact.html">
+              <button class="btn btn-primary">Get Started</button></a
+            >
+          </div>
+        </div>
+      </div>
       <!-- js部分 -->
 
       <script src="https://unpkg.com/scrollreveal"></script>
       <script>
+        // document
+        //   .getElementById("btn btn-primary")
+        //   .addEventListener("click", function () {
+        //     window.location.href = "https://www.example.com"; // 替换为你想要跳转的链接
+        //   });
         // 图文渐显
         ScrollReveal().reveal(".scroll-animation", {
           distance: "50px",

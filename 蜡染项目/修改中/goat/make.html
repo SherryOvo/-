@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #101f30;
+  background-color: #19202f;
 }
 
 body .shell {
@@ -50,8 +50,8 @@ body .shell-main-nav ul .nav-box {
   left: 240px;
 }
 video {
-            width: 200%;
-            height: 600px;
+            width: 2000px;
+            height: 800px;
         }
 .canvas-container {
   position: absolute;
@@ -98,6 +98,7 @@ canvas {
         
     <script type="module">
       import * as THREE from 'https://cdn.skypack.dev/three@0.146.0';
+      
     
       // 初始化场景、相机和渲染器
       const scene = new THREE.Scene();
@@ -105,27 +106,29 @@ canvas {
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
-      renderer.setClearColor(new THREE.Color(0x101f30)); //背景颜色
-
+      renderer.setClearColor(new THREE.Color(0x545454)); // 背景颜色
+    
       const textureLoader = new THREE.TextureLoader();
-      const texturePath = 'stuff3.jpg'; // 替换为您的纹理图片路径  修改中\goat\image\Stuff3.jpg
+      const texturePath = 'stuff3.jpg'; // 替换为您的纹理图片路径
       const texture = textureLoader.load(texturePath, () => {
-    // 在纹理加载完成后，重新渲染场景以显示更新的材质
-      renderer.render(scene, camera);
-  });
+        // 在纹理加载完成后，重新渲染场景以显示更新的材质
+        renderer.render(scene, camera);
+      });
     
       // 创建一个立方体模型
-      const BoxGeometryThickness = 0.04;
-      const BoxGeometryLength = 4.5;
-      const BoxGeometryHeight = 6.0;
-      const boxGeometry = new THREE.BoxGeometry(BoxGeometryLength, BoxGeometryHeight, BoxGeometryThickness); // 修复变量名拼写错误
+      const boxThickness = 0.04;
+      const boxLength = 4.5;
+      const boxHeight = 6.0;
+      const boxGeometry = new THREE.BoxGeometry(boxLength, boxHeight, boxThickness);
       const cubeMaterial = new THREE.MeshPhongMaterial({
-       map: texture, // 将纹理赋值给材质的 map 属性
-       color: 0xffffff,
-       flatShading: true
-  });
-  const cube = new THREE.Mesh(boxGeometry, cubeMaterial);
-  scene.add(cube);
+        map: texture, // 将纹理赋值给材质的 map 属性
+        color: 0xffffff,
+        flatShading: true,
+        opacity: 0, // 初始透明度设为0
+        transparent: true, // 启用透明度
+      });
+      const cube = new THREE.Mesh(boxGeometry, cubeMaterial);
+      scene.add(cube);
     
       // 设置摄像机位置
       camera.position.z = 5;
@@ -139,10 +142,24 @@ canvas {
       scene.add(directionalLight);
     
       // 渲染循环
+      let fadeInDuration = 6; // 淡入持续时间（秒）
+      let fadeInStartTime = null; // 记录淡入开始时间
+      let cubeOpacityTarget = 1; // 目标透明度
+    
       function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+    
+        if (!fadeInStartTime) {
+          fadeInStartTime = performance.now();
+        }
+    
+        const elapsedTime = performance.now() - fadeInStartTime;
+        const progress = Math.min(1, elapsedTime / (fadeInDuration * 1000));
+    
+        cube.material.opacity = progress * cubeOpacityTarget;
+    
+        cube.rotation.x += 0.00;
+        cube.rotation.y += 0.006;
         renderer.render(scene, camera);
       }
       animate();
