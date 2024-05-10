@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  /* background: url(/修改中/goat/image/1/6.jpg) no-repeat; */
+  margin: 0; /* 移除默认的浏览器边距 */
+  background: url(/修改中/goat/image/preview.jpg) no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  width: auto;
+  -webkit-background-size: cover; /* 对于旧版Webkit浏览器的兼容 */
+  -moz-background-size: cover; /* 对于旧版Firefox的兼容 */
+  -o-background-size: cover; /* 对于旧版Opera的兼容 */
+  width: 100%;
 }
 
 .content {
@@ -173,10 +176,10 @@ history scroll-animation {
   font-family: "Arial Black", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: #BF00FF;
 
   /* 设置背景样式 */
-  background-color: #f5f5f5;
+  background-color: #7717c61a;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

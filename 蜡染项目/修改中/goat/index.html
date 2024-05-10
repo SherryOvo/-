@@ -309,6 +309,28 @@ body .shell-main-footer {
     }
 
     timer()
+    function recordTimestamp(name) {  
+                console.log(`${name}: ${Date.now()}`);  
+            }  
+              
+            // 在页面加载开始时记录时间戳  
+            window.addEventListener('load', function() {  
+                recordTimestamp('Page Load Start');  
+              
+                // 这里模拟页面加载和渲染的过程（在真实应用中，这是由浏览器自动处理的）  
+                setTimeout(function() {  
+                    // 假设这是页面首次渲染的时间点  
+                    recordTimestamp('First Contentful Paint (Simulated)');  
+              
+                    // 在这里你可以添加更多的性能标记或计算时间差  
+                    // 例如：  
+                    var fcpTime = Date.now();  
+                    var loadStartTime = window.performance.timing.fetchStart; // 这只是一个示例，实际上可能需要其他方式来获取加载开始时间  
+                    var whiteScreenTime = fcpTime - loadStartTime;  
+                    console.log('Estimated White Screen Time: ' + whiteScreenTime + 'ms');  
+                }, 2000); // 假设页面在2秒后首次渲染内容  
+            });
+
 
 </script>
 

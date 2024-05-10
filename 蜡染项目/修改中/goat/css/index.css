@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #205ca1;
 }
 body .shell-smokeWord {
   height: 100vh;
@@ -30,7 +31,7 @@ body .shell-smokeWord h1 {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
-  color: #ffffff;
+  color: #17f803;
   font-size: 5em;
   font-family: sans-serif;
   letter-spacing: 0.2em;
@@ -231,7 +232,7 @@ body .shell-main-lbt {
   overflow: hidden;
   background-image: url("../image/技艺1.jpg" );
   background-size: cover;
-  background-color: #fff;
+  background-color: #F3F9F1;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;

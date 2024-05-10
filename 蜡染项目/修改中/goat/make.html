@@ -28,7 +28,8 @@ body {
 
 body .shell {
   width: 100%;
-  position: relative;
+  top:0;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +63,9 @@ video {
 }
 
 canvas {
+  position: fixed;
+  top: 60px;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -89,24 +93,22 @@ canvas {
             </div>
         </div>
         <!-- 为Three.js canvas添加容器 -->
-        <video src="./vedio/stablevideo_3a31795e-2742-4ce5-a3e0-ac86b177380d.mp4" muted autoplay></video>
+        <!-- <video src="./vedio/stablevideo_3a31795e-2742-4ce5-a3e0-ac86b177380d.mp4" muted autoplay></video> -->
         <div id="canvas-container">
             <canvas id="threejs-canvas"></canvas>
         </div>
     </div>
           
-        
     <script type="module">
-      import * as THREE from 'https://cdn.skypack.dev/three@0.146.0';
-      
-    
+      import * as THREE from 'three';
+      import { OrbitControls } from 'goat/three/examples/jsm/controls/OrbitControls';
       // 初始化场景、相机和渲染器
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
-      renderer.setClearColor(new THREE.Color(0x545454)); // 背景颜色
+      // renderer.setClearColor(new THREE.Color(0x000000)); // 背景颜色
     
       const textureLoader = new THREE.TextureLoader();
       const texturePath = 'stuff3.jpg'; // 替换为您的纹理图片路径
@@ -140,7 +142,13 @@ canvas {
       const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // 主光源
       directionalLight.position.set(1, 1, 1).normalize();
       scene.add(directionalLight);
-    
+      
+      // const lightHelper = new THREE.PointLightHelper(pointLight)
+      const gridHelper = new THREE.GridHelper(200, 50);
+      scene.add(gridHelper);
+
+      const controls = new OrbitControls(camera, renderer.domElement);
+      // controls.enableDamping = true;
       // 渲染循环
       let fadeInDuration = 6; // 淡入持续时间（秒）
       let fadeInStartTime = null; // 记录淡入开始时间
@@ -157,10 +165,14 @@ canvas {
         const progress = Math.min(1, elapsedTime / (fadeInDuration * 1000));
     
         cube.material.opacity = progress * cubeOpacityTarget;
-    
+
+        
         cube.rotation.x += 0.00;
-        cube.rotation.y += 0.006;
-        renderer.render(scene, camera);
+        cube.rotation.y += 0.01;
+        
+        controls.update();
+        renderer.render( scene, camera );
+         
       }
       animate();
     
