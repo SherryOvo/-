@@ -1,3 +1,15 @@
+@import url('bootstrap.css');
+@import url('ionicons.min.css');
+@import url('linearicons.css');
+@import url('animate.css');
+@import url('magnific-popup.css');
+@import url('jquery.pagepiling.css');
+@import url('owl.carousel.css');
+@import url('settings.css');
+@import url('layers.css');
+@import url('navigation.css');
+
+
 html{
   font-size: 12px;
   -webkit-font-smoothing: antialiased;

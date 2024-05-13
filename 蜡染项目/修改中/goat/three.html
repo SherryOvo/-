@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miao batik</title>
+    <style>
+      .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out; /* 动画过渡效果 */
+      }
+      @font-face {
+  font-family: 'font'; 
+  src: url("../font/优设标题黑_猫啃网.ttf");
+}
+.custom-link {
+            color: rgb(255, 255, 255); 
+            text-decoration: none;
+            font-size: 40px;
+        }
+        * {
+  background-image: linear-gradient(to right, #7577f8, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* 使文本颜色透明，以便背景渐变可见 */
+}   
+        .custom-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff;                 
+            ; 
+        }
+    </style>
+  </head>
+  <body> 
+
+    <canvas id="bg"></canvas>   
+
+    <main>
+      
+      <header class="header">
+        <h1>蜡染的工艺</h1>
+        <p class="hidden">Welcome to Miao batik introduce</p>
+      </header>
+
+      <section>
+        <h2>Introduce</h2>
+        <p class="hidden">
+          传统的手工印染技术，以其古朴典雅、图案精美而闻名遐迩。<br/>
+          蜡染不仅仅是苗族服饰的重要装饰手法，更是苗族文化传承和生活哲学的体现<br/>
+          每一个图案背后都蕴含着丰富的文化寓意和民族故事
+        </p>
+
+        <p class="hidden">
+          步骤包括：磨布、熬蜡、画蜡、染色和脱蜡。<br/>
+          首先，匠人会选用质地适宜的平纱府绸或棉麻布料<br/>
+          通过特制的鹅卵石在蜡板上碾压布面，使之平整紧致。
+        </p>
+
+        <p class="hidden">
+          接着，将黄蜡加热至融化状态，用特制的蜡刀（或竹片）蘸取蜡液<br/>
+          在布面上绘制出精美的图案，这一过程需要极高的技艺和艺术创造力
+          <br/>图案往往包含自然界的动植物、几何图形或是苗族神话传说中的元素。
+        </p>
+
+      </section>
+
+      <section class="light">
+        <h2>Stain</h2>
+
+        <p class="hidden">
+          随后，将画好的蜡布浸入天然靛蓝染液中，经过反复染色<br/>
+          使得未被蜡覆盖的部分吸收染料变蓝，而蜡覆盖之处则保留布料本色。
+        </p>
+
+        <h2>Heat</h2>
+
+        <p class="hidden">
+          最后，通过加热的方式去除布上的蜡，显露出蓝底白花或白底蓝花的鲜明对比<br/>
+          形成蜡染特有的冷艳与质朴之美。整个过程不仅考验着匠人的耐心与细致<br/>
+          也体现了人与自然和谐共存的生态智慧，因为使用的染料多源自自然，如靛蓝是从蓝草中提取而来。
+        </p>
+
+        </section>
+        
+      <section class="left">
+        <h2>Batik communication</h2>
+        
+        <p class="hidden">
+          苗族蜡染不仅是日常生活中的实用品<br/>
+          如女性服装、床单、被面、包头巾、背包等<br/>
+          更成为了艺术收藏和文化交流的媒介。
+        </p>
+
+        <h3>pattern</h3>
+        <p class="hidden">
+          蜡染刺绣作品上的图案<br/>
+          反映了苗族同胞迁徙、斗争、生活的各种场景<br/>
+          记载了整个民族的兴衰与变迁<br/>
+          对研究苗族历史演进和苗族文化具有重要价值
+          实为苗族同胞一部历史画卷。
+        </p>
+        <h3>Develop</h3>
+        <p class="hidden">
+          在现代，随着对传统文化的重视和创新设计的融入，苗族蜡染正以新的姿态活跃于国际时尚舞台，让更多人领略到这份来自远古的蓝色魅力，同时也为苗族社区的经济发展和文化传承注入了新的活力。
+        </p>
+
+      </section>
+     
+      <section class="thank">
+        <p class="hidden">Thanks for watching!</p>
+        <li><a class="custom-link" href="./make.html">点此退出</a></li>
+      </section>
+
+
+    </main>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 获取所有需要动画效果的段落
+      const paragraphs = document.querySelectorAll('.hidden');
+      
+      // 辅助函数：检查元素是否至少有一部分在视口内
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+             
+      function handleScroll() {
+        paragraphs.forEach((paragraph) => {
+          // 如果元素在视口内，则根据滚动位置调整透明度；否则，保持隐藏
+          if (isInViewport(paragraph)) {
+            // 计算当前滚动位置相对于文档总高度的比例，调整透明度逻辑保持不变
+            const scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            const opacity = Math.min(scrollPercentage + parseFloat(paragraph.dataset.index) * 0.9, 1);
+            paragraph.style.opacity = opacity;
+          } else {
+            paragraph.style.opacity = 0;
+          }
+        });
+      }
+  
+      // 为每个段落分配一个数据索引，用于计算不同的透明度起始值
+      paragraphs.forEach((paragraph, index) => {
+        paragraph.dataset.index = index;
+      });
+  
+      // 添加滚动事件监听器
+      window.addEventListener('scroll', handleScroll);
+  
+      // 初始化时调用一次
+      handleScroll();
+    });
+  </script>
+   
+</html>

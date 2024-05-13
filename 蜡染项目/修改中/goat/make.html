@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>苗族蜡染</title>
     <link rel="stylesheet" href="./css/threejsNav.css">
@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #19202f;
+  background-color: #003ac680;
 }
 
 body .shell {
@@ -51,8 +51,8 @@ body .shell-main-nav ul .nav-box {
   left: 240px;
 }
 video {
-            width: 2000px;
-            height: 800px;
+            width: 1000px;
+            height: 600px;
         }
 .canvas-container {
   position: absolute;
@@ -69,8 +69,24 @@ canvas {
   display: block;
   width: 100%;
   height: 100%;
-}
+}    
+.custom-link {
+            color: rgb(255, 255, 255); 
+            text-decoration: none;
+            font-size: 50px;
+        }
         
+        
+        .custom-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff,
+            0 0 10px #fff;                 
+            ; 
+        }
     </style>
        
 </head>
@@ -92,98 +108,10 @@ canvas {
                 </ul>
             </div>
         </div>
-        <!-- 为Three.js canvas添加容器 -->
-        <!-- <video src="./vedio/stablevideo_3a31795e-2742-4ce5-a3e0-ac86b177380d.mp4" muted autoplay></video> -->
-        <div id="canvas-container">
-            <canvas id="threejs-canvas"></canvas>
-        </div>
+        <video src="./vedio/ink.mp4" muted autoplay></video>
+        <li><a class="custom-link" href="./three.html">点此进入工艺展示</a></li>
     </div>
-          
-    <script type="module">
-      import * as THREE from 'three';
-      import { OrbitControls } from 'goat/three/examples/jsm/controls/OrbitControls';
-      // 初始化场景、相机和渲染器
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-      // renderer.setClearColor(new THREE.Color(0x000000)); // 背景颜色
-    
-      const textureLoader = new THREE.TextureLoader();
-      const texturePath = 'stuff3.jpg'; // 替换为您的纹理图片路径
-      const texture = textureLoader.load(texturePath, () => {
-        // 在纹理加载完成后，重新渲染场景以显示更新的材质
-        renderer.render(scene, camera);
-      });
-    
-      // 创建一个立方体模型
-      const boxThickness = 0.04;
-      const boxLength = 4.5;
-      const boxHeight = 6.0;
-      const boxGeometry = new THREE.BoxGeometry(boxLength, boxHeight, boxThickness);
-      const cubeMaterial = new THREE.MeshPhongMaterial({
-        map: texture, // 将纹理赋值给材质的 map 属性
-        color: 0xffffff,
-        flatShading: true,
-        opacity: 0, // 初始透明度设为0
-        transparent: true, // 启用透明度
-      });
-      const cube = new THREE.Mesh(boxGeometry, cubeMaterial);
-      scene.add(cube);
-    
-      // 设置摄像机位置
-      camera.position.z = 5;
-    
-      // 添加光照
-      const ambientLight = new THREE.AmbientLight(0x404040); // 软环境光
-      scene.add(ambientLight);
-    
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // 主光源
-      directionalLight.position.set(1, 1, 1).normalize();
-      scene.add(directionalLight);
-      
-      // const lightHelper = new THREE.PointLightHelper(pointLight)
-      const gridHelper = new THREE.GridHelper(200, 50);
-      scene.add(gridHelper);
-
-      const controls = new OrbitControls(camera, renderer.domElement);
-      // controls.enableDamping = true;
-      // 渲染循环
-      let fadeInDuration = 6; // 淡入持续时间（秒）
-      let fadeInStartTime = null; // 记录淡入开始时间
-      let cubeOpacityTarget = 1; // 目标透明度
-    
-      function animate() {
-        requestAnimationFrame(animate);
-    
-        if (!fadeInStartTime) {
-          fadeInStartTime = performance.now();
-        }
-    
-        const elapsedTime = performance.now() - fadeInStartTime;
-        const progress = Math.min(1, elapsedTime / (fadeInDuration * 1000));
-    
-        cube.material.opacity = progress * cubeOpacityTarget;
-
-        
-        cube.rotation.x += 0.00;
-        cube.rotation.y += 0.01;
-        
-        controls.update();
-        renderer.render( scene, camera );
-         
-      }
-      animate();
-    
-      // 适应窗口尺寸变化
-      window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      });
-    </script>
-   
+    <script type="module" src="/main.js"></script>
 </body>
 
 </html>

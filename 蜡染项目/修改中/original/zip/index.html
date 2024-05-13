@@ -3,64 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>苗族蜡染</title>
     <link rel="stylesheet" href="./css/index.css">
-    
+    <link rel="stylesheet" href="./css/all.css">
 </head>
 
-<style>
-@font-face {
-  font-family: 'font';
-  src: url("../font/优设标题黑_猫啃网.ttf");
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  outline: none;
-  text-decoration: none;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f7f7f7;
-}
-body .shell-main-footer {
-  width: 100%;
-  position: relative;
-  height: 100px;
-  transform: translateY(100px);
-  display: flex;
-  justify-content: center;
-  letter-spacing: 2px;
-  align-items: center;
-  text-align: center;
-  font: 100 30px 'font';
-  background-color: #a1e6ff;
-}
-</style>
 <body>
     <div class="shell">
-        <section class="shell-smokeWord">
-            <video src="./vedio/smoke.mp4" muted autoplay></video>
-            <h1>
-                <span>欢</span>
-                <span>迎</span>
-                <span>您</span>
-                <span>来</span>
-                <span>到</span>
-                <span>苗</span>
-                <span>族</span>
-                <span>蜡</span>
-                <span>染</span>
-            </h1>
-        </section>
         <div class="shell-top">
+            <div class="word">
+                <section class="word-font">
+                    <video src="./vedio/smoke.mp4" muted autoplay></video>
+                    <h1>
+                    <span>欢</span>
+                    <span>迎</span>
+                    <span>来</span>
+                    <span>到</span>
+                    <span>苗</span>
+                    <span>族</span>
+                    <span>蜡</span>
+                    <span>染</span>
+                    </h1>
+                </section>
+            </div>
         </div>
         <div class="shell-main">
             <div class="shell-main-nav">
@@ -70,9 +37,9 @@ body .shell-main-footer {
                 <ul>
                     <li><a href="./index.html">首页</a></li>
                     <li><a href="./Template.html">历史渊源</a></li>
-                    <li><a href="./make.html">工艺技艺</a></li>
+                    <li><a href="./make.html">工艺记忆</a></li>
                     <li><a href="./painter.html">传承保护</a></li>
-                    <li><a href="./contact.html">联系我们</a></li>
+                    <li><a href="./Login.html">社会影响</a></li>
                     <div class="nav-box"></div>
                 </ul>
             </div>
@@ -89,7 +56,7 @@ body .shell-main-footer {
                     <li class="min"></li>
                     <li class="min"></li>
                     <li class="min"></li>
-                </ui>·
+                </ui>
                 <div class="button">
                     <div class="button-left"></div>
                             <div class="button-right"></div>
@@ -121,7 +88,7 @@ body .shell-main-footer {
                 </div>
                 <div class="shell-main-image">
                     <div class="shell-main-image-left">
-                        <h2></h2><br/>
+                        <h2></h2><br />
                         <span></span>
                     </div>
                     <div class="shell-main-image-auto">
@@ -132,44 +99,9 @@ body .shell-main-footer {
                         <span></span>
                     </div>
                     <div class="shell-main-image-img">
-
-                        <div class="container">
-                            <div class="card">
-                                <div class="imgBx">
-                                    <img src="./image/素材5.jpg" alt="Image 1">
-                                </div>
-                                <div class="content">
-                                    <h2>家居用品</h2>
-                                    <p>床单、被面、桌布、壁挂、窗帘等家居装饰品也会采用蜡染工艺制作，为日常生活增添了浓厚的艺术气息
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="imgBx">
-                                    <img src="./image/素材6.jpg" alt="Image 2">
-                                </div>
-                                <div class="content">
-                                    <h2>服饰</h2>
-                                    <p>
-                                        蜡染布料常被用来制作苗族妇女的服装、头巾、腰带、背扇等，是苗族服饰文化的重要组成部分，体现了女性群体在家庭和社会生活中的角色与地位
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="imgBx">
-                                    <img src="./image/素材7.jpg" alt="Image 3">
-                                </div>
-                                <div class="content">
-                                    <h2>文化交流与研究</h2>
-                                    <p>
-                                        苗族蜡染作为非物质文化遗产，吸引了国内外学者的研究兴趣，成为民族学、人类学、艺术史等领域的重要研究对象，对于传承民族文化、增进民族间相互了解具有重要意义
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <img src="./image/素材5.jpg" alt="">
+                        <img src="./image/素材5.jpg" alt="">
                         <img src="./image/素材6.jpg" alt="">
-                        <img src="./image/素材7.jpg" alt=""> -->
+                        <img src="./image/素材7.jpg" alt="">
                     </div>
                 </div>
                 <div class="shell-main-footer">
@@ -181,43 +113,6 @@ body .shell-main-footer {
 <!-- 引入jquery -->
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
 <script>
-
-//     *************************************************************************************
-//    禁止用户放缩网页
-// const keyCodeMap = {
-//     // 91: true, // command
-//     61: true,
-//     107: true, // 数字键盘 +
-//     109: true, // 数字键盘 -
-//     173: true, // 火狐 - 号
-//     187: true, // +
-//     189: true, // -
-// };
-// 覆盖ctrl||command + ‘+’/‘-’
-// document.onkeydown = function (event) {
-//     const e = event || window.event;
-//     const ctrlKey = e.ctrlKey || e.metaKey;
-//     if (ctrlKey && keyCodeMap[e.keyCode]) {
-//         e.preventDefault();
-//     } else if (e.detail) { // Firefox
-//         event.returnValue = false;
-//     }
-// };
-// 覆盖鼠标滑动
-// document.body.addEventListener('wheel', (e) => {
-//     if (e.ctrlKey) {
-//         if (e.deltaY < 0) {
-//             e.preventDefault();
-//             return false;
-//         }
-//         if (e.deltaY > 0) {
-//             e.preventDefault();
-//             return false;
-//         }
-//     }
-// }, { passive: false });
-
-// *********************************************************************************************
     window.addEventListener('scroll', function () {
         let top = window.scrollY
         if (top != 0) {
@@ -309,29 +204,6 @@ body .shell-main-footer {
     }
 
     timer()
-    function recordTimestamp(name) {  
-                console.log(`${name}: ${Date.now()}`);  
-            }  
-              
-            // 在页面加载开始时记录时间戳  
-            window.addEventListener('load', function() {  
-                recordTimestamp('Page Load Start');  
-              
-                // 这里模拟页面加载和渲染的过程（在真实应用中，这是由浏览器自动处理的）  
-                setTimeout(function() {  
-                    // 假设这是页面首次渲染的时间点  
-                    recordTimestamp('First Contentful Paint (Simulated)');  
-              
-                    // 在这里你可以添加更多的性能标记或计算时间差  
-                    // 例如：  
-                    var fcpTime = Date.now();  
-                    var loadStartTime = window.performance.timing.fetchStart; // 这只是一个示例，实际上可能需要其他方式来获取加载开始时间  
-                    var whiteScreenTime = fcpTime - loadStartTime;  
-                    console.log('Estimated White Screen Time: ' + whiteScreenTime + 'ms');  
-                }, 2000); // 假设页面在2秒后首次渲染内容  
-            });
-
-
 </script>
 
 </html>
