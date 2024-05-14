@@ -31,11 +31,12 @@ body .shell-smokeWord h1 {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
-  color: #17f803;
+  color: #94eb8d;
   font-size: 5em;
   font-family: sans-serif;
   letter-spacing: 0.2em;
 }
+
 body .shell-smokeWord h1 span {
   opacity: 0;
   display: inline-block;

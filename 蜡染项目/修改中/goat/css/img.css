@@ -1,5 +1,3 @@
-@import url("https://api.fontshare.com/v2/css?f[]=archivo@100,200,300,400,500,600,700,800,900&f[]=clash-display@200,300,400,500,600,700&display=swap");
-
 :root {
 	--slide-width: min(25vw, 300px);
 	--slide-aspect: 2 / 3;

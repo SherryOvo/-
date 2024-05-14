@@ -11,6 +11,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/img.css" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/h.css" />
@@ -49,85 +50,153 @@
           </ul>
         </div>
       </div>
-      <div class="content">
-        <div class="big-box">
-          <div class="small-box">
-            <img src="./image/1/butterfly.png" alt="图片1" />
-            <p>
-              蝴蝶纹:蝴蝶图案在苗族服饰中十分常见。在苗族传说中，蝴蝶妈妈孵化出苗族祖先“姜央”，因此被视作苗族始祖。族人对蝴蝶妈妈的祭拜与供奉，可以保佑村寨安宁昌盛，子孙绵延。
-            </p>
+      <div class="slider">
+        <button class="slider--btn slider--btn__prev"></button>
+
+        <div class="slides__wrapper">
+          <div class="slides">
+            <!-- slide 1 -->
+            <div class="slide" data-current>
+              <div class="slide__inner">
+                <div class="slide--image__wrapper">
+                  <img
+                    class="slide--image"
+                    src="./image/bird.png"
+                    alt="Image 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="slide__bg"
+              style="--bg: url(./image/bird.png); --dir: 0"
+              data-current
+            ></div>
+
+            <!-- slide 2 -->
+            <div class="slide" data-next>
+              <div class="slide__inner">
+                <div class="slide--image__wrapper">
+                  <img
+                    class="slide--image"
+                    src="./image/long.png"
+                    alt="Image 1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="slide__bg"
+              style="--bg: url(./image/long.png); --dir: 1"
+              data-next
+            ></div>
+
+            <!-- slide 3 -->
+            <div class="slide" data-previous>
+              <div class="slide__inner">
+                <div class="slide--image__wrapper">
+                  <img
+                    class="slide--image"
+                    src="./image/flower.png"
+                    alt="Image 1"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="slide__bg"
+              style="--bg: url(./image/5.jpg); --dir: -1"
+              data-previous
+            ></div>
           </div>
-          <div class="small-box">
-            <img src="./image/1/bird.png" alt="图片2" />
-            <p>
-              鸟纹:苗族内部自称为“嘎闹”，在苗语中是鸟的意思。苗族蜡染绘制的鸟纹种类繁多，造型各异，生动有趣。
-            </p>
-          </div>
-          <div class="small-box">
-            <img src="./image/1/long.png" alt="图片3" />
-            <p>
-              龙纹:在苗族，龙是大众的保护神，与皇权至上的龙不同，是所有人都可以使用的，反映了苗族人的平民意识。龙纹造型憨态可掬，象征了吉祥与好运，以及对年年风调雨顺的期盼。
-            </p>
-          </div>
-          <div class="small-box">
-            <img src="./image/1/flower.png" alt="图片4" />
-            <p>
-              梨花纹:相传苗族祖先在迁徙途中碰到一片盛开的梨花，艰难之中顿生希望，希望族人的将来也能够像这梨花一样充满生命力，生生不息。
-            </p>
+          <div class="slides--infos">
+            <!-- Slide Info 1 -->
+            <div class="slide-info" data-current>
+              <div class="slide-info__inner">
+                <div class="slide-info--text__wrapper">
+                  <div data-title class="slide-info--text">
+                    <span>鸟纹</span>
+                  </div>
+                  <div data-subtitle class="slide-info--text">
+                    <span>苗族内部自称为“嘎闹”，在苗语中是鸟的意思。</span>
+                  </div>
+                  <div data-description class="slide-info--text">
+                    <span
+                      >苗族蜡染绘制的鸟纹种类繁多，造型各异，生动有趣。</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide Info 2 -->
+            <div class="slide-info" data-next>
+              <div class="slide-info__inner">
+                <div class="slide-info--text__wrapper">
+                  <div data-title class="slide-info--text">
+                    <span>龙纹</span>
+                  </div>
+                  <div data-subtitle class="slide-info--text">
+                    <span
+                      >在苗族，龙是大众的保护神，与皇权至上的龙不同，<br />是所有人都可以使用的，反映了苗族人的平民意识</span
+                    >
+                  </div>
+                  <div data-description class="slide-info--text">
+                    <span
+                      >龙纹造型憨态可掬，象征了吉祥与好运，以及对年年风调雨顺的期盼</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide Info 3 -->
+            <div class="slide-info" data-previous>
+              <div class="slide-info__inner">
+                <div class="slide-info--text__wrapper">
+                  <div data-title class="slide-info--text">
+                    <span>梨花纹</span>
+                  </div>
+                  <div data-subtitle class="slide-info--text">
+                    <span
+                      >相传苗族祖先在迁徙途中碰到一片盛开的梨花<br />艰难之中顿生希望</span
+                    >
+                  </div>
+                  <div data-description class="slide-info--text">
+                    <span
+                      >梨花纹代表族人的将来也能够像这梨花一样充满生命力，生生不息。</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="bg scroll-animation">
-          <div class="unique-paragraph">
-            <p>
-              蜡染是中华民族古老的民间传统印染工艺之一
-              早在秦汉时代，苗族人民就已掌握了蜡染技术。珙县苗族蜡染在四川苗族蜡染中独树一帜.
-              清光绪《珙县志》记载：罗渡苗民取蜡熔而绘于布，染后煮布洗蜡，成蜡染裙。
-            </p>
-          </div>
-        </div>
-        <!-- <div class="history scroll-animation">
-          <img src="/修改中/goat/image/1/6.jpg" alt="" />
-        </div> -->
-        <!-- <div class="txt">
-          <h1 class="scroll-animation">
-            蜡染是中华民族古老的民间传统印染工艺之一，早在秦汉时代，苗族人民就已掌握了蜡染技术。珙县苗族蜡染在四川苗族蜡染中独树一帜，清光绪《珙县志》记载：罗渡苗民取蜡熔而绘于布，染后煮布洗蜡，成蜡染 裙。
-          </h1>
-        </div> -->
+
+        <button class="slider--btn slider--btn__next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
-      <div class="container">
-        <div class="box-1 scroll-animation">
-          <img src="./image/1/1.jpg" alt="" />
-        </div>
-        <div class="box-2 scroll-animation">
-          <img src="./image/1/2.jpg" alt="" />
-        </div>
-        <div class="box-3 scroll-animation">
-          <img src="./image/1/5.jpg" alt="" />
-        </div>
-      </div>
-      <div
-        class="hero min-h-screen"
-        style="
-          background-image: url(./image/大理石1.png);
-        "
-      >
-        <div class="hero-overlay bg-opacity-60"></div>
-        <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold">传承保护</h1>
-            <p class="mb-5">
-              苗族蜡染，这一古老而深邃的艺术形式，承载着苗族人民千百年来的智慧与情感，是苗族文化传承的璀璨瑰宝。蜡染以其独特的制作工艺和图案设计，诉说着苗族的历史传说、生活习俗与审美观念。在蜡染的世界里，每一笔、每一划都蕴含着深厚的文化内涵，是苗族人民对美好生活的向往与追求。
-              然而，在现代化的冲击下，苗族蜡染的传承面临着诸多挑战。为了保护和传承这一非物质文化遗产，我们需要采取更加积极的措施，让更多的人了解和认识苗族蜡染，激发年轻一代对其的兴趣与热爱。同时，我们还应深入挖掘苗族蜡染的艺术价值和文化内涵，将其与现代审美相结合，创造出更多具有时代特色的蜡染作品。
-              相信在不久的将来，苗族蜡染这一独特的艺术形式将焕发出更加绚丽的光彩，成为中华民族优秀传统文化的重要代表之一，为世界文化多样性贡献出独特的力量。
-            </p>
-            <a href="./contact.html">
-              <button class="btn btn-primary">Get Started</button></a
-            >
-          </div>
-        </div>
+
+      <div class="loader">
+        <span class="loader__text">0%</span>
       </div>
       <!-- js部分 -->
-
+      <script src="./node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
+      <script type="module" src="./js/script.js"></script>
       <script src="https://unpkg.com/scrollreveal"></script>
       <script>
         // document
@@ -144,8 +213,6 @@
           opacity: 0,
           easing: "ease-in-out",
         });
-
-
       </script>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
