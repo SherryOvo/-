@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Voyage Slider</title>
+    <link rel="stylesheet" href="./css/img.css" />
+  </head>
+  <script src="./node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script type="module" src="./js/script.js"></script>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="slider">
+      <button class="slider--btn slider--btn__prev"></button>
+
+      <div class="slides__wrapper">
+        <div class="slides">
+          <!-- slide 1 -->
+          <div class="slide" data-current>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./image/bird.png"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide__bg"
+            style="--bg: url(./image/bird.png); --dir: 0"
+            data-current
+          ></div>
+
+          <!-- slide 2 -->
+          <div class="slide" data-next>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./image/long.png"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide__bg"
+            style="--bg: url(./image/long.png); --dir: 1"
+            data-next
+          ></div>
+
+          <!-- slide 3 -->
+          <div class="slide" data-previous>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./image/flower.png"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="slide__bg"
+            style="--bg: url(./image/5.jpg); --dir: -1"
+            data-previous
+          ></div>
+        </div>
+        <div class="slides--infos">
+          <!-- Slide Info 1 -->
+          <div class="slide-info" data-current>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>鸟纹</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span>苗族内部自称为“嘎闹”，在苗语中是鸟的意思。</span>
+                </div>
+                <div data-description class="slide-info--text">
+                  <span>苗族蜡染绘制的鸟纹种类繁多，造型各异，生动有趣。</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Info 2 -->
+          <div class="slide-info" data-next>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>龙纹</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span
+                    >在苗族，龙是大众的保护神，与皇权至上的龙不同，<br />是所有人都可以使用的，反映了苗族人的平民意识</span
+                  >
+                </div>
+                <div data-description class="slide-info--text">
+                  <span
+                    >龙纹造型憨态可掬，象征了吉祥与好运，以及对年年风调雨顺的期盼</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Info 3 -->
+          <div class="slide-info" data-previous>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>梨花纹</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span
+                    >相传苗族祖先在迁徙途中碰到一片盛开的梨花<br />艰难之中顿生希望</span
+                  >
+                </div>
+                <div data-description class="slide-info--text">
+                  <span
+                    >梨花纹代表族人的将来也能够像这梨花一样充满生命力，生生不息。</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="slider--btn slider--btn__next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="loader">
+      <span class="loader__text">0%</span>
+    </div>
+
+  </body>
+
+</html>
