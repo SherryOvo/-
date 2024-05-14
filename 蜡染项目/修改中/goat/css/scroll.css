@@ -71,7 +71,7 @@ a:first-of-type {
 	color: white;
 }
 a:last-of-type {
-	background: hsl(173 100% 51%);
+	background: hsl(241, 53%, 64%);
 	color: black;
 	padding: 1rem 2rem;
 	border-radius: 22px;
@@ -80,7 +80,7 @@ a:last-of-type {
 	transition: background 0.2s;
 }
 a:last-of-type:is(:hover, :focus-visible) {
-	background: hsl(173 100% 40%);
+	background: hsl(204, 77%, 59%);
 }
 
 .content {
@@ -212,7 +212,7 @@ section:nth-of-type(2) article:nth-of-type(3) img {
 .text-blocks p:nth-of-type(even) {
 	justify-self: end;
 	text-align: right;
-	color: hsl(173 100% 51%);
+	color: hsl(194, 100%, 91%);
 }
 .text-blocks p:nth-of-type(odd) {
 	justify-self: start;

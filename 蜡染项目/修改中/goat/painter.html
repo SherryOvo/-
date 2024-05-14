@@ -13,7 +13,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/img.css" />
     <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/h.css" />
 
     <style>
@@ -30,6 +29,47 @@
       body .shell-main-nav {
         margin-bottom: 0;
       }
+
+@font-face {
+  font-family: 'font';
+  src: url("../font/优设标题黑_猫啃网.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+body .shell {
+  width: 100%;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .shell-main-footer {
+  width: 100%;
+  position: relative;
+  height: 100px;
+  transform: translateY(100px);
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+  align-items: center;
+  text-align: center;
+  font: 100 30px 'font';
+  background-color: #41555d;
+}
     </style>
   </head>
 

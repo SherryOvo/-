@@ -8,231 +8,101 @@
     <title>历史渊源</title>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./css/scroll.css">
     <style>
         @font-face {
        font-family: 'font';
        src: url("../font/优设标题黑_猫啃网.ttf");
         }
-        body {
-            background-image: url(./image/大理石2.png); /* 确保gif文件的路径正确 */
-            background-repeat: no-repeat; /* 防止图片重复 */
-            background-position: auto; /* 图像居中对齐，这在拉伸时能保持重要部分可见 */
-            background-size: cover; 
-            background-size: 100% 100%;
-        }
-        body .shell-main-nav ul .nav-box {
-            left: 120px;
-        }
-
-        body .shell-main {
-            margin-bottom: 0;
-        }
-
-        body .shell-main-nav {
-            margin-bottom: 0;
-        }
-
-        body .content {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            width: 90%;
-            padding: 10px;
-            margin: 100px auto;
-        }
-
-        body .content .content-box {
-            flex: 0 0 calc(50% - 30px);
-            width: 90%;
-            height: 400px;
-            margin: 15px;
-            background-color: rgba(255, 255, 255, 0);
-            /* box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5); */
-            text-align: center;
-            line-height: 50px;
-        }
-
-
-        body .content .content-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        body .content .content-box:hover img {
-            transform: scale(1.15, 1.15);
-        }
-       
-        body .mainText p{
-            margin: 0 auto; 
-            text-align: center;  
-            padding: 0;
-            font-size: 30px;    
-            line-height: 1.3;
-            max-width: 55ch;
-        }
-
-
-        .animate {
-            opacity: 0;
-            /* 初始不可见 */
-            animation: slide-up 1.5s ease forwards;
-        }
-
-        .animateLeft {
-            opacity: 0;
-            /* 初始不可见 */
-            font-size: 26px;
-            animation: slide-left 1.5s ease forwards;
-        }
-
-        .animateRight {
-            opacity: 0;
-            /* 初始不可见 */
-            font-size: 26px;
-            animation: slide-right 1.5s ease forwards;
-        }
-
-        @keyframes slide-up {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-left {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-right {
-            0% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        .mainText{
-            margin-bottom: 720px; 
-        }
-        .mainText span{
-            color: hsla(0, 0%, 100%, 0.2);
-            background-clip: text;
-            background-size: 0 100%;
-            background-repeat: no-repeat;
-            background-image: linear-gradient(90deg, #41295A, #2C3E50, #276678);
-            animation: animateText linear forwards;
-            animation-timeline: view();
-            
-        }
-        .mainText{
-            animation-range-start:cover 20vh;
-            animation-range-end:cover 100vh;
-        }
-        @keyframes animateText{
-         to    {
-            background-size: 100% 100% ;
-        }
-    }
-
-/* 图片淡入动画 */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.fadeIn {
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
     </style>
 </head>
 
 <body>
     <div class="shell">
-        <div class="shell-main">
-            <div class="shell-main-nav">
-                <div class="logo">
-                    <span>苗族蜡染</span>
-                </div>
-                <ul>
-                    <li><a href="./index.html">首页</a></li>
-                    <li><a href="./Template.html">历史渊源</a></li>
-                    <li><a href="./make.html">工艺技艺</a></li>
-                    <li><a href="./painter.html">传承保护</a></li>
-                    <li><a href="./contact.html">联系我们</a></li>
-                    <div class="nav-box"></div>
-                </ul>
-            </div>
-        </div>
+
         <!-- 主要内容展示 -->
-        <div class="content">
-            <div class="content-box">
-                <p class="animateLeft">
-                    苗族蜡染是一种历史悠久的传统工艺，起源于秦汉时期，至今已有2000多年的历史。苗族蜡染是一种独特的印染技术，主要流传于苗族聚居的贵州、四川、云南等地。这种技艺涉及将蜡液绘制在布上，形成各种图案，然后进行染色，染色后去除蜡，布上就会留下白色的图案。这种技术最初可能是在无意中发现的，后来被苗族人民发展成一种独特的艺术形式。
-                </p>
+        <nav>
+
+            <circle cx="161.191" cy="320.191" r="133.191" stroke="currentColor" stroke-width="20"></circle>
+            <circle cx="806.809" cy="320.191" r="133.191" stroke="currentColor" stroke-width="20"></circle>
+            <circle cx="695.019" cy="587.733" r="31.4016" fill="currentColor"></circle>
+            <circle cx="272.981" cy="587.733" r="31.4016" fill="currentColor"></circle>
+            <path d="M564.388 712.083C564.388 743.994 526.035 779.911 483.372 779.911C440.709 779.911 402.356 743.994 402.356 712.083C402.356 680.173 440.709 664.353 483.372 664.353C526.035 664.353 564.388 680.173 564.388 712.083Z" fill="currentColor"></path>
+            <rect x="310.42" y="448.31" width="343.468" height="51.4986" fill="#FF1E1E"></rect>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M745.643 288.24C815.368 344.185 854.539 432.623 854.539 511.741H614.938V454.652C614.938 433.113 597.477 415.652 575.938 415.652H388.37C366.831 415.652 349.37 433.113 349.37 454.652V511.741L110.949 511.741C110.949 432.623 150.12 344.185 219.845 288.24C289.57 232.295 384.138 200.865 482.744 200.865C581.35 200.865 675.918 232.295 745.643 288.24Z" fill="currentColor"></path>
+      </nav>
+      <main>
+        <section>
+          <div class="fixed">
+            <img src="./image/scollF3.jpg" alt="">
+            <div class="content">
+              <h1>就此开始了解！</h1>
+              <p>苗族蜡染，这一源自古老中国的传统手工艺，不仅承载着深厚的文化底蕴，更是中华民族多元艺术宝库中的一颗璀璨明珠。</p>
             </div>
-            <div class="content-box">
-                <img src="./image/发展历史1.png" alt="">
+          </div>
+        </section>
+        <section>
+          <article>
+            <div class="fixed">
+              <img src="./image/scollF4.jpg" alt="">
             </div>
-            <div class="content-box">
-                <img src="./image/素材7.jpg" alt="">
-            </div>
-            <div class="content-box">
-                <p class="animateRight">
-                    苗族蜡染的图案通常富含象征意义，反映了苗族人的生活、历史和文化。其工艺特点是以蓝白两色为主，常与挑花、补花等技艺结合，形成了独特的风格和魅力。随着时间的推移，苗族蜡染技艺不仅在技术上得到了发展，在艺术上也形成了独特的风格。其被视为苗族文化的重要组成部分，对于了解苗族历史和文化有着重要的意义。
-                </p>
+            <div class="static">
+              <div class="content">
+                <div class="text-wrap">
+                  <div class="loud-wrap">
+                    <h2>丰富的传说色彩.</h2>
+                  </div>
                 </div>
-        </div>
-        <!-- 主要介绍 -->
-        <div class="mainText">
-            <p><span>
-                有一个聪明美丽的苗族姑娘并不满足于衣服的均一色彩，总希望能在裙子上染出各种各样的花卉图案来<br/>
-                可是一件一件的手工绘制实在太麻烦<br/>
-                但她一时又想不出什么好办法来，终日为此闷闷不乐。
-                一天，姑娘又看着一簇簇一丛丛的鲜花久久发楞，办法没想出来却在沉思中昏昏入睡。
-                朦胧中有一个衣着漂亮的花仙子把她带到了一个百花园中<br/>
-                园里有无数的奇花异草，鸟语花香、蝶舞蜂忙。
-                姑娘在花园中看呀看呀，看得入了迷，连蜜蜂爬满了她的衣裙也浑然不知。等她醒来一看，才知道刚才是睡着了，
-                可是低头再看：花丛中的蜜蜂真的刚刚飞走<br/>
-                而且在她的衣裙上留下了斑斑点点的蜜汁和蜂蜡，很不好看。
-                她只好把衣裙拿到存放着靛蓝的染桶中去，想重新把衣裙染一次，试图覆盖掉蜡迹。染完之后，又拿到沸水中去漂清浮色。
-                当姑娘从沸水中取出衣裙的时候<br/>
-                奇迹出现了：深蓝色的衣裙上被蜂蜡沾过的地方出现了美丽的白花！姑娘心头一动，立即找来蜂蜡<br/>
-                加热熬化后用树枝在白布上画出了蜡花图案，然后放到靛蓝染液中去染色，最后用沸水熔掉蜂蜡，
-                布面上就现出了各种各样的白花，哦！染缸中居然染出了印花布，姑娘高兴地唱起了山歌。
-                人们听到了姑娘的歌声，纷纷来到她家听她讲百花园里的梦境、观看她染出的花裙、学习她描花绘图的技艺，
-                大家回到自己家里之后，照着姑娘教给的方法，也都染出了花样繁多的花布。
-                从此，蜡染技术就在苗族及与之杂居的布依、瑶族等兄弟民族之间流传开来了。
-            </span>
-            </p>
-        </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="fixed"></div>
+            <div class="static">
+              <div class="content">
+                <h2>精细的艺术.<br />耐心与技巧.</h2>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="fixed">
+              <img src="./image/scollF1.jpg" alt="">
+            </div>
+            <div class="static">
+              <div class="content">
+                <h2>想要知道更多吗？</h2>
+                <div class="chat-container">
+                  <div class="text-blocks">
+                    <p>蜡染起源？</p>
+                    <p>其中一则故事讲述了一位苗族姑娘因渴望织造出美丽的衣物而苦无良策，却在梦中偶遇花仙，醒来后发现衣物上沾满了蜜蜂留下的蜂蜡，意外发现经过染色后，蜂蜡遮盖的部分留下了独特的白色图案，从而启发了蜡染技艺的诞生。</p>
+                    <p>渊源</p>
+                    <p>历史可追溯至遥远的秦汉时期，那时被称为“蜡缬”，是中国古代三大印花技艺之一，与扎染、蓝印花布并称。苗族蜡染技艺，历经千年的风雨洗礼，至今仍在中国西南地区的苗族聚居地</p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="filler">
+                  <h2>这很酷对吗？</h2>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="fixed">
+              <img src="./image/首页.jpg" alt="" />
+              <div class="content">
+                <h2>Click bellow.<br>Follow for more.</h2>
+                <li><a class="custom-link" href="./make.html">前往工艺技艺</a></li>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <!-- partial -->
+        <script type="module" src="./js/scroll.js"></script>
        
     </div>
-
+    
 </body>
 
 </html>

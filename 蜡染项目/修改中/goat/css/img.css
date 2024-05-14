@@ -23,9 +23,7 @@ body {
 
 body {
 	display: grid;
-	place-items: center;
 	overflow: hidden;
-
 	background: rgba(0, 0, 0, 0.787);
 }
 
