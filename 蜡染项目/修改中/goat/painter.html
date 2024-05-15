@@ -5,12 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>传承保护</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="./css/img.css" />
     <link rel="stylesheet" href="./css/nav.css" />
-    <!-- <link rel="stylesheet" href="./css/h.css" /> -->
-
     <style>
+         @font-face {
+        font-family: 'font';
+        src: url("../font/优设标题黑_猫啃网.ttf");
+            }
       body .shell-main-nav ul .nav-box {
         left: 360px;
       }
@@ -25,18 +26,14 @@
         margin-bottom: 0;
       }
 
-@font-face {
-  font-family: 'font';
-  src: url("../font/优设标题黑_猫啃网.ttf");
-}
 
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  outline: none;
-  text-decoration: none;
-}
+           * {
+         padding: 0;
+         margin: 0;
+         list-style: none;
+         outline: none;
+         text-decoration: none;
+            }
 
 body {
   display: flex;
@@ -63,7 +60,21 @@ body .shell-main-footer {
   align-items: center;
   text-align: center;
   font: 100 30px 'font';
-  background-color: #41555d;
+  background-color: #5d5041;
+}
+.painterSon{
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%); /* 用于水平居中 */
+  font-size: 40px;
+}
+a {
+  color: #8d8d8d;
+  text-decoration: none;
+}
+a:hover {
+  color: #232323;
 }
     </style>
   </head>
@@ -164,7 +175,6 @@ body .shell-main-footer {
                 </div>
               </div>
             </div>
-
             <!-- Slide Info 2 -->
             <div class="slide-info" data-next>
               <div class="slide-info__inner">
@@ -185,7 +195,6 @@ body .shell-main-footer {
                 </div>
               </div>
             </div>
-
             <!-- Slide Info 3 -->
             <div class="slide-info" data-previous>
               <div class="slide-info__inner">
@@ -208,7 +217,6 @@ body .shell-main-footer {
             </div>
           </div>
         </div>
-
         <button class="slider--btn slider--btn__next">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -224,22 +232,19 @@ body .shell-main-footer {
             <path d="m9 18 6-6-6-6" />
           </svg>
         </button>
+        <li><a class="painterSon" href="./painterS.html">继续探索</a></li>
       </div>
-
+<!-- ******************************************************************************* -->
       <div class="loader">
         <span class="loader__text">0%</span>
       </div>
+      
       <!-- js部分 -->
+      <script src="./js/painteR.js"></script>
       <script src="./node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
       <script type="module" src="./js/script.js"></script>
       <script src="https://unpkg.com/scrollreveal"></script>
       <script>
-        // document
-        //   .getElementById("btn btn-primary")
-        //   .addEventListener("click", function () {
-        //     window.location.href = "https://www.example.com"; // 替换为你想要跳转的链接
-        //   });
-        // 图文渐显
         ScrollReveal().reveal(".scroll-animation", {
           distance: "50px",
           origin: "bottom",
@@ -251,6 +256,5 @@ body .shell-main-footer {
       </script>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
-    <script></script>
   </body>
 </html>

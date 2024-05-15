@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Landing Page HTML &amp; CSS-1</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="./css/painterS.css" />
+    <link rel="stylesheet" href="./css/timeline.css">
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <ul class="c-accordion">
+      <li
+        id="cf"
+        class="c-accordion__item"
+        style="--cover: url(../image/blue1.jpg)"
+      >
+        <a href="#cf" class="c-accordion__action">
+          <div class="c-accordion__content">
+            <h2
+              class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show"
+            >
+              艺术方面
+            </h2>
+            <p class="c-accordion__description">
+              珙县苗族蜡染显著特点是图案精美，线条流畅。蜡绘时大多不打样，样稿蕴藏于心。图案或重于写实，或写意，点线结合，疏密相间，既夸张又富有人情味。
+            </p>
+          </div>
+          <div class="c-accordion__aside">
+            <h2 class="c-accordion__title c-accordion__title--hover-hide">
+              Art
+            </h2>
+          </div>
+        </a>
+      </li>
+      <li
+        id="corp"
+        class="c-accordion__item"
+        style="
+          --cover: url(../image/blue2.jpg);
+        "
+      >
+        <a href="#corp" class="c-accordion__action">
+          <div class="c-accordion__content">
+            <h2
+              class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show"
+            >
+              艺术价值
+            </h2>
+            <p class="c-accordion__description">
+              图案纹样十分丰富，有几何形，也有自然形象，一般都来自生活或优美的传说故事，具有浓郁的民族色彩。从珙县苗族蜡染图案中，人们还可以看到苗族先民迁徙的历史轨迹，看到一幅幅美丽而又欢乐的生命赞歌。
+            </p>
+          </div>
+          <div class="c-accordion__aside">
+            <h2 class="c-accordion__title c-accordion__title--hover-hide">
+              Value
+            </h2>
+          </div>
+        </a>
+      </li>
+      <li
+        id="lead"
+        class="c-accordion__item"
+        style="
+          --cover: url(../image/blue3.jpg);
+        "
+      >
+        <a href="#lead" class="c-accordion__action">
+          <div class="c-accordion__content">
+            <h2
+              class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show"
+            >
+             文化方面
+            </h2>
+            <p class="c-accordion__description">
+              苗族支系众多，不同苗族部落的装饰风格也各不相同。例如安顺苗族蜡染就以几何纹为主要装饰纹样，结构灵动；而丹寨的苗族蜡染多以自然纹样为主，生动流畅、简练质朴，乡土气息浓郁；
+            </p>
+          </div>
+          <div class="c-accordion__aside">
+            <h2 class="c-accordion__title c-accordion__title--hover-hide">
+              Culture
+            </h2>
+          </div>
+        </a>
+      </li>
+      <li
+        id="warehouse"
+        class="c-accordion__item"
+        style="
+          --cover: url(../image/blue4.jpg);
+        "
+      >
+        <a href="#warehouse" class="c-accordion__action">
+          <div class="c-accordion__content">
+            <h2
+              class="c-accordion__title c-accordion__title--hero c-accordion__title--hover-show"
+            >
+              文化价值
+            </h2>
+            <p class="c-accordion__description">
+              蜡染这样的习俗世代传承，使得她们形成了以蜡染为起点的服饰装束、婚礼节庆、社交生活、丧葬风俗等民俗文化。这证明了蜡染在苗族文化中的重要作用，也昭示了保护和传承蜡染技艺的必要性。
+            </p>
+          </div>
+          <div class="c-accordion__aside">
+            <h2 class="c-accordion__title c-accordion__title--hover-hide">
+              Culture value
+            </h2>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <ul id='timeline'>
+      <li class='work'>
+        <input class='radio' id='work5' name='works' type='radio' checked>
+        <div class="relative">
+          <label for='work5'>家庭与社区传承</label>
+          <span class='date'>community</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            苗族蜡染技艺往往通过家族内部口传心授的方式代代相传。鼓励和支持蜡染艺人将技艺传授给子女及年轻一代，确保技艺在家庭内部得到延续。同时，加强社区内的技艺交流，组织定期的技艺展示和工作坊，让社区成员有机会学习和实践。
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work4' name='works' type='radio'>
+        <div class="relative">
+          <label for='work4'>技艺培训与工作坊</label>
+          <span class='date'>Skill</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            政府和非政府组织可以合作举办蜡染技艺培训班和工作坊，针对不同年龄段的人群开设基础班、提高班等，提供系统的技能培训，同时引入现代设计理念，提升产品的市场竞争力。
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work3' name='works' type='radio'>
+        <div class="relative">
+          <label for='work3'>文化旅游融合</label>
+          <span class='date'>tourism</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            利用蜡染作为特色旅游资源，开发蜡染体验旅游项目，如蜡染手工艺体验中心、文化村等，让游客亲身体验蜡染制作过程，了解背后的文化故事，既传播了文化，也增加了艺人的经济收入。
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work2' name='works' type='radio'>
+        <div class="relative">
+          <label for='work2'>数字化记录与传播</label>
+          <span class='date'>digital record</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            运用现代科技手段，如数字影像记录、三维扫描等，对蜡染技艺进行详细记录和存档，建立线上数据库和虚拟博物馆，便于远程学习和研究。同时，利用社交媒体、视频平台等新媒体渠道，扩大蜡染文化的影响力。
+          </p>
+        </div>
+      </li>
+      <li class='work'>
+        <input class='radio' id='work1' name='works' type='radio'>
+        <div class="relative">
+          <label for='work1'>跨领域合作</label>
+          <span class='date'>cooperation</span>
+          <span class='circle'></span>
+        </div>
+        <div class='content'>
+          <p>
+            促进蜡染与其他艺术形式或现代设计的跨界合作，如与时尚设计师合作推出蜡染时装，与家居品牌合作开发蜡染家居用品，让传统技艺焕发新的生机。
+          </p>
+        </div>
+      </li>
+    </ul>
+    <!-- partial -->
+    <div class="button1">
+    <button class="button" onclick="window.location.href='./contact.html'">联系我们</button>
+  </div>
+  </body>
+</html>
