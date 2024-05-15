@@ -21,6 +21,7 @@ body {
 	background: black;
 	color: hsl(0 0% 90%);
 	overflow-x: hidden;
+  font-family: 'font';
 }
 
 p {
@@ -41,7 +42,7 @@ article {
 }
 :is(h1, h2) {
 	font-weight: 70;
-	font-size: clamp(2.5rem, 3.35vw + 1rem, 8rem);
+	font-size: clamp(6rem, 3.35vw + 1rem, 15rem);
 	letter-spacing: -0.075ch;
 	margin: 0;
 }
@@ -71,7 +72,7 @@ a:first-of-type {
 	color: white;
 }
 a:last-of-type {
-	background: hsl(241, 53%, 64%);
+	background: hsl(234, 19%, 58%);
 	color: black;
 	padding: 1rem 2rem;
 	border-radius: 22px;
@@ -139,7 +140,7 @@ section:first-of-type {
 }
 
 section:first-of-type p {
-	font-size: clamp(1rem, 0.2vw + 1rem, 2rem);
+	font-size: clamp(2rem, 0.2vw + 1rem, 2rem);
 }
 
 section:nth-of-type(2) article:first-of-type .fixed {
@@ -206,7 +207,7 @@ section:nth-of-type(2) article:nth-of-type(3) img {
 	display: inline-block;
 	border-radius: 6px;
 	margin: 0;
-	font-size: clamp(1.5rem, 0.5vw + 1rem, 4rem);
+	font-size: clamp(2rem, 0.5vw + 1rem, 4rem);
 	font-weight: 120;
 }
 .text-blocks p:nth-of-type(even) {

@@ -12,9 +12,10 @@ body {
   padding: 0 5%;
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
-  color: #eee9dc;
-  background-image: url(../image/painterB.jpg);
+  color: #dce4ee;
+  /* background-image: url(../image/painterB.jpg); */
   /* background-repeat: no-repeat; */
+  background-color: #131417;
 }
 
 h2 {
@@ -71,7 +72,7 @@ h2 {
   border-style: solid;
   border-radius: 0.5em;
   position: relative;
-  background-color: #015e70;
+  background-color: #191f2e;
 }
 .content:before, .content:after {
   content: "";

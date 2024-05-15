@@ -32,9 +32,10 @@ body .shell-smokeWord h1 {
   width: 100%;
   text-align: center;
   color: #94eb8d;
-  font-size: 5em;
-  font-family: sans-serif;
-  letter-spacing: 0.2em;
+  font-size: 7.2em;
+  font-family: 'font';
+  letter-spacing: 0.1em;
+  font-weight: 100;
 }
 
 body .shell-smokeWord h1 span {
@@ -431,6 +432,7 @@ body .shell-main-header-left-bottom {
     /* 保持0.2秒的延迟不变 */
   transition-delay: .2s;
   font-size: 20px;
+  font-family: 'font';
 }
 
 body .shell-main-header-right {
@@ -479,9 +481,10 @@ body .shell-main-content-left::before {
 }
 
 body .shell-main-content-left h2 {
-  font-size: 40px;
-  color: #fff;
+  font-size: 60px;
+  color: #ffffff;
   letter-spacing: 10px;
+  font-family: 'font';
 }
 
 body .shell-main-content-left-fans {
