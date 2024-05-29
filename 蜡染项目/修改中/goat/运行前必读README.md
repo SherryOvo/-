@@ -3,6 +3,10 @@
 
 ```
 git clone <this-repo>
-npm install
+···
+
+go /index.html/ npm install
+
 npm run dev
+
 ```

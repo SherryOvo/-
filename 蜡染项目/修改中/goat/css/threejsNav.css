@@ -17,7 +17,7 @@ body .shell-main-nav {
     top: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 8vh;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
+    background-color: #8b9daf;
     backdrop-filter: blur(13px);
 }
 body .shell-main-nav .logo {

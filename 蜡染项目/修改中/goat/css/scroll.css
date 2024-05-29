@@ -67,23 +67,24 @@ nav {
 a:first-of-type {
 	width: 48px;
 	aspect-ratio: 1;
-	display: grid;
 	place-items: center;
 	color: white;
 }
 a:last-of-type {
 	background: hsl(234, 19%, 58%);
 	color: black;
-	padding: 1rem 2rem;
+	padding: 0.5rem 2rem;
 	border-radius: 22px;
 	text-decoration: none;
-	font-weight: 120;
+	font-size: 2.6rem;
 	transition: background 0.2s;
 }
 a:last-of-type:is(:hover, :focus-visible) {
-	background: hsl(204, 77%, 59%);
+	background: hsl(203, 11%, 45%);
 }
-
+/* a.custom-link {
+	background-color: bisque;
+} */
 .content {
 	margin: 0 auto;
 	width: 900px;

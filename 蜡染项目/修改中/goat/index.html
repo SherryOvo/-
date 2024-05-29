@@ -30,6 +30,9 @@ body {
   align-items: center;
   background-color: #f7f7f7;
 }
+body .shell-main {
+    background-color: #181d29;
+}
 body .shell-main-footer {
   width: 100%;
   position: relative;
@@ -41,19 +44,14 @@ body .shell-main-footer {
   align-items: center;
   text-align: center;
   font: 100 30px 'font';
-  background-color: #a1e6ff;
+  background-color: #3d567a;
 }
 </style>
 <body>
     <div class="shell">
         <section class="shell-smokeWord">
-            <video src="./vedio/smoke.mp4" muted autoplay></video>
+            <video  class="myVideo" src="./vedio/smoke.mp4" muted autoplay></video>
             <h1>
-                <span>欢</span>
-                <span>迎</span>
-                <span>您</span>
-                <span>来</span>
-                <span>到</span>
                 <span>苗</span>
                 <span>族</span>
                 <span>蜡</span>
@@ -293,7 +291,6 @@ body .shell-main-footer {
                     console.log('Estimated White Screen Time: ' + whiteScreenTime + 'ms');  
                 }, 2000); // 假设页面在2秒后首次渲染内容  
             });
-
 
 </script>
 
