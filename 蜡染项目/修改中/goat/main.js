@@ -1,6 +1,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 // Setup
 const scene = new THREE.Scene();
@@ -42,13 +43,27 @@ const moon = new THREE.Mesh(
     normalMap: normalTexture,
   })
 );
-scene.add(moon);
-
+// scene.add(moon);
 moon.position.z = 15;
 moon.position.setX(-10);
-
 jeff.position.z = -5;
 jeff.position.x = 2;
+
+// loadobj 
+
+new OBJLoader().load('moon.obj', function(object) {
+  object.traverse(function(child) {
+    if (child instanceof THREE.Mesh) {
+      child.material.map = new THREE.TextureLoader().load('stuff.png'); 
+      child.material.normalMap = new THREE.TextureLoader().load('stuff.png'); 
+    }
+  });
+  
+  object.scale.set(0.1, 0.1, 0.1); // 调整模型大小
+  object.position.set(-10, 0, 15); // 设置模型位置
+  scene.add(object);
+});
+
 
 // Particle Stars
 const particleCount = 2000;
@@ -62,10 +77,28 @@ for (let i = 0; i < particleCount; i++) {
   positions.set([x, y, z], i * 3);
 }
 
-// 设置粒子颜色
+function generateCosmicColor(index, particleCount) {
+  // 通过索引产生平滑的颜色变化，模拟宇宙中从紫色到蓝色再到白色的渐变
+  const t = index / particleCount;
+  
+  // 当索引较小时，粒子偏向紫色
+  if (t < 0.33) {
+    return new THREE.Color(1 - t * 3, t * 3, 1); // 从紫色(1, 0, 1)渐变到蓝色
+  }
+  // 中间部分，粒子偏向淡蓝色
+  else if (t < 0.66) {
+    return new THREE.Color(0, t * 3 - 1, 1); // 从蓝色(0, 1, 1)渐变，保持亮度同时向白色过渡
+  }
+  // 索引较大时，粒子更接近白色，模拟远处星星的色彩
+  else {
+    // 让颜色逐渐变亮，模拟星星的白色光芒
+    const brightnessFactor = 1 + (t - 0.66) * 3; // 从全亮度到更亮
+    return new THREE.Color(brightnessFactor, brightnessFactor, brightnessFactor);
+  }
+}
+
 for (let i = 0; i < particleCount; i++) {
-  // 直接设置为白色，忽略之前的插值逻辑
-  const color = new THREE.Color(0xffffff); // 这里0xffffff代表纯白色
+  const color = generateCosmicColor(i, particleCount);
   colors.set(color.toArray(), i * 3);
 }
 
